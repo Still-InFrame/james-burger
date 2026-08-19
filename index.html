@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0a08" />
+  <meta name="description" content="Burger James serves crispy-edge smash burgers, waffle fries and family-friendly flavor in Miami Gardens." />
+  <meta property="og:title" content="Burger James — Smash Different" />
+  <meta property="og:description" content="Miami Gardens smash burgers with crispy edges, melty cheese and a 4.9-star neighborhood welcome." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <title>Burger James | Smash Different</title>
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-mark">BJ</div><div class="loader-line"><i></i></div></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Burger James home"><span>Burger</span><b>James</b></a>
+    <nav aria-label="Primary navigation">
+      <a href="#smash">The Smash</a><a href="#favorites">Favorites</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="pill magnetic" href="tel:+13057496014">Order by phone</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-stage">
+      <div class="hero-media">
+        <video id="heroScrub" muted playsinline preload="auto" poster="assets/hero-burger.png" aria-label="A cinematic camera journey through a Burger James smash burger">
+          <source src="assets/burger-journey.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="scrub-status" aria-hidden="true"><span>Scroll to journey inside</span><i></i></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Miami Gardens, Florida · 4.9 ★</p>
+        <h1 aria-label="Smash different"><span class="line">Smash</span><span class="line accent">different.</span></h1>
+        <div class="hero-bottom reveal">
+          <p>Crispy edges. Melty centers.<br />Made with neighborhood love.</p>
+          <a class="circle-link magnetic" href="#smash" aria-label="Explore the Burger James smash"><span>Scroll</span><i>↓</i></a>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true"><div>CRISPY EDGES · JUICY CENTERS · HOUSE SAUCE · WAFFLE FRIES · MIAMI GARDENS · CRISPY EDGES · JUICY CENTERS · HOUSE SAUCE · WAFFLE FRIES · MIAMI GARDENS ·</div></div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="smash">
+      <div class="section-label">01 / THE SMASH</div>
+      <div class="manifesto-grid">
+        <p class="kicker reveal">One bite<br />changes everything.</p>
+        <div class="manifesto-copy">
+          <h2 class="split-text">Pressed hot. Seared hard. Served fast.</h2>
+          <p class="reveal">We chase the part everybody remembers: that deep caramelized crust around a juicy center, tucked under molten cheese and finished with our house sauce.</p>
+        </div>
+      </div>
+      <div class="macro-stage">
+        <div class="macro-frame" data-scale>
+          <img src="assets/bacon-smash.png" alt="Close-up Burger James bacon smash burger" loading="lazy" />
+        </div>
+        <div class="ingredient chip-one">Crispy lace</div><div class="ingredient chip-two">House sauce</div><div class="ingredient chip-three">Double cheese</div>
+      </div>
+    </section>
+
+    <section class="favorites" id="favorites">
+      <div class="section-label">02 / THE FAVORITES</div>
+      <div class="favorites-head"><h2>Built for the<br /><em>craving.</em></h2><p>Choose your smash. Add waffle fries. Make it a combo and don’t overthink it.</p></div>
+      <div class="menu-rail" role="list">
+        <article class="menu-card hero-card" role="listitem"><div class="card-no">01</div><img src="assets/double-smash.png" alt="Two classic double smash burgers" loading="lazy" /><div class="card-copy"><h3>Double Smash</h3><p>Two lacy-edge patties, American cheese, soft toasted bun.</p></div></article>
+        <article class="menu-card orange" role="listitem"><div class="card-no">02</div><div class="type-art">EXTRA<br />CRISPY</div><div class="card-copy"><h3>Waffle Fries</h3><p>Golden, seasoned and ready for a house-sauce dip.</p></div></article>
+        <article class="menu-card interior-card" role="listitem"><div class="card-no">03</div><img src="assets/interior.png" alt="Colorful Burger James dining room in Miami Gardens" loading="lazy" /><div class="card-copy"><h3>Family Table</h3><p>Kids’ menu, vegan options and room for the whole crew.</p></div></article>
+      </div>
+      <div class="menu-note"><span>$10–20 per person</span><span>Vegan options</span><span>Kids’ menu</span><span>Wi-Fi</span></div>
+    </section>
+
+    <section class="proof" id="reviews">
+      <div class="score-wrap"><span class="score">4.9</span><div><div class="stars">★★★★★</div><p>345 Google reviews</p></div></div>
+      <div class="review-stack">
+        <blockquote class="review active">“10/10 amazing burgers, fast service, excellent quality. Best smash burgers in town.”<cite>— Google reviewer</cite></blockquote>
+        <blockquote class="review">“The house sauce and smash burger combo is perfectly paired. Juicy, tender, balanced.”<cite>— Google reviewer</cite></blockquote>
+        <blockquote class="review">“The staff is welcoming. The double smash burger was made with hella love.”<cite>— Google reviewer</cite></blockquote>
+      </div>
+      <div class="review-dots" aria-label="Review carousel"><button class="active" aria-label="Show review 1"></button><button aria-label="Show review 2"></button><button aria-label="Show review 3"></button></div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="visit-image" data-parallax="0.1"><img src="assets/interior.png" alt="Inside the colorful Burger James restaurant" loading="lazy" /></div>
+      <div class="visit-shade"></div>
+      <div class="visit-copy">
+        <div class="section-label">03 / PULL UP</div>
+        <h2>Meet you<br />at James.</h2>
+        <div class="visit-details"><p>19333 NW 2nd Ave<br />Miami Gardens, FL 33169</p><p>Open daily from 11 AM<br /><a href="tel:+13057496014">(305) 749-6014</a></p></div>
+        <div class="visit-actions"><a class="button yellow magnetic" href="https://www.google.com/maps/search/?api=1&query=19333+NW+2nd+Ave+Miami+Gardens+FL+33169" target="_blank" rel="noopener">Get directions ↗</a><a class="button ghost magnetic" href="tel:+13057496014">Call to order</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#top">BURGER<br /><span>JAMES</span></a><div><p>Smash burgers made with love<br />in Miami Gardens.</p><small>© <span id="year"></span> Burger James</small></div><div class="footer-links"><a href="tel:+13057496014">Call</a><a href="#favorites">Menu</a><a href="https://www.google.com/maps/search/?api=1&query=19333+NW+2nd+Ave+Miami+Gardens+FL+33169" target="_blank" rel="noopener">Directions</a></div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
