@@ -16,8 +16,13 @@ function initMotion() {
     .to('.hero .reveal', { y: 0, opacity: 1, duration: .7, stagger: .1 }, '-=.5');
 
   gsap.to('.progress span', { width: '100%', ease: 'none', scrollTrigger: { start: 'top top', end: 'max', scrub: .15 } });
+
   const scrubVideo = document.querySelector('#heroScrub');
+  let scrubReady = false;
+
   const setupVideoScrub = () => {
+    if (scrubReady || !scrubVideo.duration) return;
+    scrubReady = true;
     scrubVideo.pause();
     scrubVideo.currentTime = 0.01;
     gsap.to(scrubVideo, {
@@ -28,7 +33,18 @@ function initMotion() {
         onUpdate: self => document.documentElement.style.setProperty('--scrub-progress', self.progress.toFixed(4))
       }
     });
+    ScrollTrigger.refresh();
   };
+
+  // Mobile unlock: a silent play/pause on the first touch tells the browser
+  // this video is approved, so it loads metadata and allows seeking.
+  const unlockVideo = () => {
+    const p = scrubVideo.play();
+    if (p) p.then(() => { scrubVideo.pause(); setupVideoScrub(); }).catch(() => {});
+  };
+  window.addEventListener('touchstart', unlockVideo, { once: true, passive: true });
+
+  scrubVideo.load(); // nudge browsers that ignore preload="auto"
   if (scrubVideo.readyState >= 1) setupVideoScrub();
   else scrubVideo.addEventListener('loadedmetadata', setupVideoScrub, { once: true });
 
